@@ -1,12 +1,22 @@
 # HashID Tool
 
+Encode & decode [hashids](https://hashids.org/).
+
 ## Installation
 
-Simply run:
+Make sure Go Module is on, by setting environment variable:
 
-`go install github.com/gg-tools/hashid`
+```shell
+$ export GO111MODULE=on
+```
 
-Make sure your `PATH` includes the `$GOPATH/bin` directory so your commands can be easily used:
+And simply run:
+
+```shell
+$ go install github.com/gg-tools/hashid
+```
+
+Make sure your `PATH` includes the `$GOPATH/bin` directory so commands can be easily used:
 
 `export PATH=$PATH:$GOPATH/bin`
 
