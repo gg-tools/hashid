@@ -1,6 +1,6 @@
 # HashID Tool
 
-Encode & decode [hashids](https://hashids.org/).
+A command line tool that encodes & decodes [hashids](https://hashids.org/).
 
 ## Installation
 
