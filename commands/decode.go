@@ -9,7 +9,8 @@ var Decode = cli.Command{
 	Name:      "decode",
 	ShortName: "d",
 	Usage:     "decode hashed ID",
-	UsageText: `
+	UsageText: `hashid d [hashedIDs...]
+
 hashid decode 25yodre1
 hashid decode 25yodre1 re7og60y
 `,

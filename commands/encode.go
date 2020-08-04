@@ -10,9 +10,10 @@ var Encode = cli.Command{
 	Name:      "encode",
 	ShortName: "e",
 	Usage:     "encode ID",
-	UsageText: `
-hashid encode 1988
-hashid encode 1988 1990
+	UsageText: `hashid e [numbers...]
+
+hashid e 1988
+hashid e 1988 1990
 `,
 	ArgsUsage: "encode [ids...]",
 	Action: func(c *cli.Context) error {
