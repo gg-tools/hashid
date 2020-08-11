@@ -2,13 +2,13 @@ package commands
 
 import (
 	"errors"
-	"github.com/urfave/cli"
+	"github.com/urfave/cli/v2"
 )
 
-var Decode = cli.Command{
-	Name:      "decode",
-	ShortName: "d",
-	Usage:     "decode hashed ID",
+var Decode = &cli.Command{
+	Name:    "decode",
+	Aliases: []string{"d"},
+	Usage:   "decode hashed ID",
 	UsageText: `hashid d [hashedIDs...]
 
 hashid decode 25yodre1
@@ -20,7 +20,7 @@ hashid decode 25yodre1 re7og60y
 			return errors.New("none hash id present")
 		}
 
-		for _, v := range c.Args() {
+		for _, v := range c.Args().Slice() {
 			id, err := decode(v)
 			if err != nil {
 				return err

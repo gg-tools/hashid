@@ -2,7 +2,7 @@ package main
 
 import (
 	"github.com/gg-tools/hashid/commands"
-	"github.com/urfave/cli"
+	"github.com/urfave/cli/v2"
 	"log"
 	"os"
 	"time"
@@ -14,7 +14,7 @@ func main() {
 	app.Compiled = time.Now()
 	app.Usage = "HashID - encode & decode id"
 	app.UsageText = `hashid [command] [args...]`
-	app.Commands = []cli.Command{commands.Encode, commands.Decode}
+	app.Commands = []*cli.Command{commands.Encode, commands.Decode}
 	app.Action = func(c *cli.Context) error {
 		cli.ShowAppHelpAndExit(c, 1)
 		return nil

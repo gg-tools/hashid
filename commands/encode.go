@@ -2,14 +2,14 @@ package commands
 
 import (
 	"errors"
-	"github.com/urfave/cli"
+	"github.com/urfave/cli/v2"
 	"strconv"
 )
 
-var Encode = cli.Command{
-	Name:      "encode",
-	ShortName: "e",
-	Usage:     "encode ID",
+var Encode = &cli.Command{
+	Name:    "encode",
+	Aliases: []string{"e"},
+	Usage:   "encode ID",
 	UsageText: `hashid e [numbers...]
 
 hashid e 1988
@@ -21,7 +21,7 @@ hashid e 1988 1990
 			return errors.New("none id present")
 		}
 
-		for _, v := range c.Args() {
+		for _, v := range c.Args().Slice() {
 			id, err := strconv.ParseInt(v, 10, 64)
 			if err != nil {
 				return err

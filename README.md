@@ -4,16 +4,10 @@ A command line tool that encodes & decodes [hashids](https://hashids.org/).
 
 ## Installation
 
-Make sure Go Module is on, by setting environment variable:
+Make sure your Go Version is greater than 1.13. And simply run:
 
 ```shell
-$ export GO111MODULE=on
-```
-
-And simply run:
-
-```shell
-$ go install github.com/gg-tools/hashid
+$ GO111MODULE=on go install github.com/gg-tools/hashid
 ```
 
 Make sure your `PATH` includes the `$GOPATH/bin` directory so commands can be easily used:
